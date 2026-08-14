@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-text-watermark-audit"
+version = "0.1.0"
+description = "Local-first auditing for invisible Unicode signals and AI text watermark claims"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AI Text Watermark Audit contributors" }]
+keywords = [
+  "ai-watermark",
+  "claude",
+  "llm-watermark",
+  "text-forensics",
+  "unicode-security",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: Text Processing :: General",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/steven-panxd/ai-text-watermark-audit"
+Documentation = "https://github.com/steven-panxd/ai-text-watermark-audit/tree/main/docs"
+Issues = "https://github.com/steven-panxd/ai-text-watermark-audit/issues"
+
+[project.scripts]
+textmark = "textmark_audit.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
