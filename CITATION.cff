@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If this software supports your research, please cite the repository and release."
+title: "AI Text Watermark Audit"
+type: software
+version: 0.1.0
+date-released: 2026-08-15
+authors:
+  - family-names: "steven-panxd"
+    alias: "steven-panxd"
+repository-code: "https://github.com/steven-panxd/ai-text-watermark-audit"
+license: MIT
