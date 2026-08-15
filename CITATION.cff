@@ -3,7 +3,7 @@ message: "If this software supports your research, please cite the repository an
 title: "AI Text Watermark Audit"
 type: software
 version: 0.1.0
-date-released: 2026-08-14
+date-released: 2026-08-15
 authors:
   - family-names: "steven-panxd"
     alias: "steven-panxd"

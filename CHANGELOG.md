@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — 2026-08-14
+## 0.1.0 — 2026-08-15
 
 - Add local Unicode and mixed-script scanning.
 - Add text-version comparison with machine-readable output.
