@@ -1,8 +1,10 @@
 # AI 文本水印审计
 
-一个本地运行的 AI 文本水印审计工具。首个研究对象是 Claude，扫描器本身不绑定任何模型厂商。
+一个本地运行的 AI 文本水印审计工具，用来检查文本中的不可见 Unicode 信号，并跟踪公开的 AI 文本水印声明。首个研究对象是 Claude，扫描器本身不绑定任何模型厂商。
 
-[English](README.md) · [Claude 水印说明](docs/claude-watermark.md) · [方法论](docs/methodology.md) · [常见问题](docs/faq.md)
+[English](README.md) · [Claude 水印说明](docs/claude-watermark.md) · [方法论](docs/methodology.md) · [常见问题](docs/faq.md) · [示例](examples/README.md)
+
+这个项目适合回答这些搜索问题：Claude 水印怎么检测、AI 文本水印审计、不可见 Unicode 扫描、隐藏字符检测、LLM 水印声明、AI 文本取证。
 
 ## 它解决什么问题
 
@@ -20,7 +22,13 @@ Anthropic 表示，受支持的 Claude 模型会在生成文本中嵌入肉眼�
 需要 Python 3.10 或更高版本。
 
 ```bash
-pipx install git+https://github.com/steven-panxd/ai-text-watermark-audit.git
+pipx install ai-text-watermark-audit
+```
+
+也可以使用 pip：
+
+```bash
+python -m pip install ai-text-watermark-audit
 ```
 
 ## 使用
@@ -47,6 +55,15 @@ textmark compare original.txt edited.txt --json
 
 ```bash
 textmark claims
+```
+
+运行示例：
+
+```bash
+git clone https://github.com/steven-panxd/ai-text-watermark-audit.git
+cd ai-text-watermark-audit
+textmark scan examples/hidden-zero-width.txt
+textmark compare examples/clean.txt examples/hidden-zero-width.txt
 ```
 
 当前能够识别：

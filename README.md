@@ -1,11 +1,14 @@
 # AI Text Watermark Audit
 
 [![CI](https://github.com/steven-panxd/ai-text-watermark-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/steven-panxd/ai-text-watermark-audit/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/ai-text-watermark-audit.svg)](https://pypi.org/project/ai-text-watermark-audit/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Local-first tools for examining invisible signals in text and testing claims about AI text watermarks. The first research target is Claude; the scanner itself is provider-neutral.
+Local-first tools for examining invisible Unicode signals in text and tracking public AI text watermark claims. The first research target is Claude; the scanner itself is provider-neutral.
 
-[简体中文](README.zh-CN.md) · [Claude watermark notes](docs/claude-watermark.md) · [Methodology](docs/methodology.md) · [FAQ](docs/faq.md)
+[简体中文](README.zh-CN.md) · [Claude watermark notes](docs/claude-watermark.md) · [Methodology](docs/methodology.md) · [FAQ](docs/faq.md) · [Examples](examples/README.md)
+
+Search phrases this project is designed to answer honestly: Claude watermark detection, AI text watermark audit, invisible Unicode scanner, hidden character detector, LLM watermark claims, and text forensics for generated text.
 
 ## Why this exists
 
@@ -21,7 +24,13 @@ Today, `textmark` can answer the first question. For Claude's model-level waterm
 Python 3.10 or newer is required.
 
 ```bash
-pipx install git+https://github.com/steven-panxd/ai-text-watermark-audit.git
+pipx install ai-text-watermark-audit
+```
+
+Or with pip:
+
+```bash
+python -m pip install ai-text-watermark-audit
 ```
 
 For development:
@@ -58,6 +67,15 @@ Show sourced vendor claims and detector availability:
 textmark claims
 ```
 
+Try the demo fixtures:
+
+```bash
+git clone https://github.com/steven-panxd/ai-text-watermark-audit.git
+cd ai-text-watermark-audit
+textmark scan examples/hidden-zero-width.txt
+textmark compare examples/clean.txt examples/hidden-zero-width.txt
+```
+
 The scanner currently reports:
 
 - zero-width and format characters;
@@ -88,6 +106,7 @@ Primary source: [How Claude marks AI-generated content](https://support.claude.c
 
 ## Roadmap
 
+- Copy-paste demo corpus for common hidden-character cases
 - A stable detector-adapter interface for official vendor tools
 - Corpus manifests and reproducible robustness runs
 - File provenance inspection for supported formats

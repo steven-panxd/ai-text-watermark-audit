@@ -1,0 +1,2 @@
+This short paragraph is ordinary UTF-8 text.
+It has no hidden Unicode formatting characters.

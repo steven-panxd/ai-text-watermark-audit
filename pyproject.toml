@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-text-watermark-audit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local-first auditing for invisible Unicode signals and AI text watermark claims"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,6 +13,7 @@ authors = [{ name = "AI Text Watermark Audit contributors" }]
 keywords = [
   "ai-watermark",
   "claude",
+  "hidden-unicode",
   "llm-watermark",
   "text-forensics",
   "unicode-security",

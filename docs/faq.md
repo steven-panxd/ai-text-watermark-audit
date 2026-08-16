@@ -31,3 +31,15 @@ No. It audits observable signals and compares text versions. It does not claim t
 ## Is text uploaded anywhere?
 
 No. The command-line scanner runs locally and has no runtime dependencies or network calls.
+
+## Can I use this in CI?
+
+Yes. Use `textmark scan FILE --json --fail-on warning` to produce a machine-readable report and return a non-zero exit status when warning-level findings are present.
+
+## What should I say when sharing results?
+
+Use careful language: "this text contains invisible Unicode signals" or "this text has no findings from this scanner." Avoid saying a finding proves AI authorship, and avoid saying a clean scan proves human authorship.
+
+## Why mention Claude if the scanner is provider-neutral?
+
+Claude is the first public claim tracked by the project because Anthropic has published a current machine-readable marking policy. The scanner remains provider-neutral because Unicode inspection is different from detecting any one vendor's private statistical watermark.

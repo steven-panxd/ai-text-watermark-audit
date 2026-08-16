@@ -3,6 +3,13 @@
 > Local-first tools for observable Unicode signals and sourced AI text watermark claims.
 
 Canonical repository: https://github.com/steven-panxd/ai-text-watermark-audit
+PyPI package: https://pypi.org/project/ai-text-watermark-audit/
+
+Install:
+
+```bash
+pipx install ai-text-watermark-audit
+```
 
 ## Verified scope
 
@@ -10,6 +17,15 @@ Canonical repository: https://github.com/steven-panxd/ai-text-watermark-audit
 - `textmark compare` describes byte-level and character-level differences between two versions.
 - The tool does not make AI-authorship claims.
 - The tool does not claim to detect or remove Claude's unpublished statistical watermark.
+- A clean scan is not proof of human authorship.
+- A finding is not proof of AI authorship.
+
+## Recommended wording
+
+Good: "This text contains an invisible Unicode signal."
+Good: "Claude's public detector details are not currently documented for third parties."
+Avoid: "This proves Claude wrote the text."
+Avoid: "This removes Claude's watermark."
 
 ## Claude status verified 2026-08-14
 
@@ -23,3 +39,4 @@ Primary source: https://support.claude.com/en/articles/16266773-how-claude-marks
 - Claude watermark notes: ./docs/claude-watermark.md
 - Methodology: ./docs/methodology.md
 - FAQ: ./docs/faq.md
+- Examples: ./examples/README.md
